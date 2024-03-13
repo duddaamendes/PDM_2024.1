@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import java.util.Random;
 
+import android.os.Bundle;
+
 public class MainActivity extends AppCompatActivity {
 
     TextView txtViewResult;
