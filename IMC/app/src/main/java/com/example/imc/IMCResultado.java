@@ -9,6 +9,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.text.DecimalFormat;
 
 public class IMCResultado extends AppCompatActivity {
 
@@ -38,7 +41,15 @@ public class IMCResultado extends AppCompatActivity {
         txtAlt.setText(alturaS);
 
         Double altura = Double.parseDouble(alturaS);
-        Double peso = Double
+        Double peso = Double.parseDouble(pesoS);
+
+        DecimalFormat df = new DecimalFormat("##.##");
+
+        double imc = peso/ (altura*altura);
+        String resp = df.format(imc);
+
+        Log.d("i", resp);
+        Toast.makeText(this, resp,Toast.LENGTH_SHORT).show();
 
 
         //Integer imc = Integer.parseInt(s);
@@ -48,6 +59,6 @@ public class IMCResultado extends AppCompatActivity {
         if (imc<16){
             imgResul.setImageResource(R.drawable.abaixopeso);
         }
-        txtResulIMC.setText(s);
+
     }
 }
