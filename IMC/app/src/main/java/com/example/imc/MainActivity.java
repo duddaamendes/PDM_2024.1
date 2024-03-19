@@ -15,7 +15,7 @@ import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText txtAltura, txtPeso;
+    EditText txtAltura, txtPeso, txtNome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,25 +23,30 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         txtAltura = findViewById(R.id.txtAltura);
         txtPeso = findViewById(R.id.txtPeso);
+        txtNome = findViewById(R.id.txtNome);
     }
 
     public void calcularIMC(View view){
-        double altura = Double.parseDouble(txtAltura.getText().toString());
-        double peso = Double.parseDouble(txtPeso.getText().toString());
-
-        DecimalFormat df = new DecimalFormat("##.##");
-
-        double imc = peso/ (altura*altura);
-        String resp = df.format(imc);
-
-        Log.d("i", resp);
-        Toast.makeText(this, resp,Toast.LENGTH_SHORT).show();
+        String altura = txtAltura.getText().toString();
+        String peso = txtPeso.getText().toString();
+        String nome = txtNome.getText().toString();
 
         Intent intent = new Intent(getApplicationContext(), IMCResultado.class);
         Bundle b = new Bundle();
-        b.putString("valorimc", resp);
+
+        b.putString("altura", altura);
+        b.putString("peso", peso);
+        b.putString("nome", nome);
         intent.putExtras(b);
         startActivity(intent);
+
+        //DecimalFormat df = new DecimalFormat("##.##");
+
+        //double imc = peso/ (altura*altura);
+        //String resp = df.format(imc);
+
+        //Log.d("i", resp);
+        //Toast.makeText(this, resp,Toast.LENGTH_SHORT).show();
 
     }
 }
