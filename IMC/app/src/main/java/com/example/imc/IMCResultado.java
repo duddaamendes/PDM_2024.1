@@ -45,8 +45,10 @@ public class IMCResultado extends AppCompatActivity {
 
         DecimalFormat df = new DecimalFormat("##.##");
 
-        double imc = peso/ (altura*altura);
+        double imc = (peso/(altura*altura));
         String resp = df.format(imc);
+
+        txtResulIMC.setText("IMC: "+resp);
 
         Log.d("i", resp);
         Toast.makeText(this, resp,Toast.LENGTH_SHORT).show();
@@ -56,8 +58,23 @@ public class IMCResultado extends AppCompatActivity {
 
         //Log.d("Valor do IMC:", bundle.getString("valorIMC"));
 
-        if (imc<16){
+        if (imc<=18.5){
             imgResul.setImageResource(R.drawable.abaixopeso);
+        }
+        if (imc>=18.5 && imc<=24.9) {
+            imgResul.setImageResource(R.drawable.normal);
+        }
+        if (imc>=25 && imc<=29.9) {
+            imgResul.setImageResource(R.drawable.sobrepeso);
+        }
+        if (imc>=30 && imc<=34.9) {
+            imgResul.setImageResource(R.drawable.obesidade1);
+        }
+        if (imc>=35 && imc<=39.9) {
+            imgResul.setImageResource(R.drawable.obesidade2);
+        }
+        if (imc>40) {
+            imgResul.setImageResource(R.drawable.obesidade3);
         }
 
     }
