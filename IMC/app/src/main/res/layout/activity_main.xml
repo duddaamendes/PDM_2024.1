@@ -42,7 +42,7 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:inputType="textPersonName"
-            android:text="Peso" />
+            android:hint="Peso"/>
 
     </LinearLayout>
 
@@ -64,7 +64,7 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:inputType="textPersonName"
-            android:text="Altura" />
+            android:hint="Altura" />
 
     </LinearLayout>
 
@@ -75,5 +75,13 @@
         android:layout_gravity="center"
         android:onClick="calcularIMC"
         android:text="Calcule" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/perfil"
+        tools:srcCompat="@drawable/perfil" />
 
 </LinearLayout>
