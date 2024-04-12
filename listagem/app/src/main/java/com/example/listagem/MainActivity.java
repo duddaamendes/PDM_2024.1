@@ -44,9 +44,9 @@ public class MainActivity extends AppCompatActivity {
                 Bundle b = new Bundle();
                 b.putString("nome", nomes[i]);
 
-                Intent i = new Integer(getApplicationContext(), SegundaActivity.class);
-                i.putExtras(b);
-                startActivity(i);
+                Intent intent = new Intent(getApplicationContext(), SegundaActivity.class);
+                intent.putExtras(b);
+                startActivity(intent);
 
             }
         });
