@@ -11,15 +11,17 @@ import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
 
-    String[] planetas = new String[] {"Tera", "Marte", "Jupiter", "Venus", "Netuno", "Saturno"};
+    String[] planetas = new String[] {"Mercurio", "Venus", "Terra", "Marte", "Jupiter", "Saturno", "Urano", "Netuno"};
 
     Planet[] planets = new Planet[]{
+            new Planet("Mercurio", R.drawable.mercurio),
+            new Planet("Venus", R.drawable.venus),
             new Planet("Terra", R.drawable.terra),
             new Planet("Marte", R.drawable.marte),
             new Planet("Jupiter", R.drawable.jupiter),
-            new Planet("Venus", R.drawable.venus),
-            new Planet("Netuno", R.drawable.netuno),
-            new Planet("Saturno", R.drawable.saturno)
+            new Planet("Saturno", R.drawable.saturno),
+            new Planet("Urano", R.drawable.urano),
+            new Planet("Netuno", R.drawable.netuno)
     };
 
     @Override

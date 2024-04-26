@@ -10,18 +10,22 @@
 
     <ListView
         android:id="@+id/listView"
-        android:layout_width="409dp"
-        android:layout_height="335dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="132dp"
-        android:layout_height="53dp"
+        android:layout_width="189dp"
+        android:layout_height="89dp"
         android:text="Planetas"
+        android:textAlignment="center"
+        android:textColor="#0A2C8F"
         android:textSize="34sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
