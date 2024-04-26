@@ -19,9 +19,9 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="297dp"
-        android:layout_height="128dp"
-        android:text="Personagens  Game of Thrones"
+        android:layout_width="189dp"
+        android:layout_height="89dp"
+        android:text="Planetas"
         android:textAlignment="center"
         android:textColor="#0A2C8F"
         android:textSize="34sp"

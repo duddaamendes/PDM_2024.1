@@ -15,11 +15,11 @@ public class MainActivity2 extends AppCompatActivity {
 
 
         Intent i = getIntent();
-        String perso = i.getStringExtra("planet");
+        String planet = i.getStringExtra("planet");
         String info = i.getStringExtra("Infos");
 
-        TextView tv = findViewById(R.id.txtNomePersonagem);
-        tv.setText(perso);
+        TextView tv = findViewById(R.id.txtNome);
+        tv.setText(planet);
 
         TextView tvInfo = findViewById(R.id.txtInfo);
         tvInfo.setText(info);
